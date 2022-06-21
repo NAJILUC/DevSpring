@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="/plantilla/template :: head">
+<head th:replace="plantilla/template :: head">
 	<style TYPE="text/css">
 		#nombre_fragmento {
 			animation-name: in_tittle;
@@ -40,7 +40,7 @@
 </head>
 
 <body>
-	<div th:replace="/plantilla/template :: mensajes"></div>
+	<div th:replace="plantilla/template :: mensajes"></div>
 
 	<div class="d-flex" id="wrapper">
 

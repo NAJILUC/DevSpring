@@ -21,7 +21,7 @@
                     <h3 class="introduce_txt">Introduce tus datos:</h3>
 
 
-                    <form th:action="@{/login}" method="post">
+                    <form th:action="@{login}" method="post">
                         <div class="divX">
                             <input class="input_usuario" type="text" placeholder="Usuario" name="username" autofocus id="username" required>
                         </div>
@@ -33,20 +33,20 @@
                         </div>
                     </form>
                     <div class="text_recuperar">
-                        ¿Olvidaste tu contraseña? <a class="link_recuperar" th:href="@{/users/password-reset-request/}">Recuperar</a>
+                        ¿Olvidaste tu contraseña? <a class="link_recuperar" th:href="@{users/password-reset-request/}">Recuperar</a>
                     </div>
                    
                 </div>
             </div>
             <div class="caja2">
-                <img class="background" width="50" th:src="@{/img/img_login.png}">
+                <img class="background" width="50" th:src="@{img/img_login.png}">
                 <div class="txt_logotipo">PROYECTOS E INGENIERÍA J4 S.A.S</div>
             </div>
         </div>
 
     </div>
- <script type="text/javascript" th:src="@{/js/util.js}"></script>
-    <script type="text/javascript" th:src="@{/js/login/login.js}"></script>
+ <script type="text/javascript" th:src="@{js/util.js}"></script>
+    <script type="text/javascript" th:src="@{js/login/login.js}"></script>
 
 </body>
 

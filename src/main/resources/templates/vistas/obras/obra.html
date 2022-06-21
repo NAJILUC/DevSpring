@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="/plantilla/template :: head">
+<head th:replace="plantilla/template :: head">
 </head>
 
 <body>
-	<div th:replace="/plantilla/template :: mensajes"></div>
+	<div th:replace="plantilla/template :: mensajes"></div>
 
 	<div class="d-flex" id="wrapper">
 
@@ -104,8 +104,8 @@
 
 					<!-- INFORMACION -->
 					<div class="row">
-						<div th:replace="/plantilla/representante :: representante"></div>
-						<div th:replace="/plantilla/siso :: siso"></div>
+						<div th:replace="plantilla/representante :: representante"></div>
+						<div th:replace="plantilla/siso :: siso"></div>
 					</div>
 				</div>
 				<!-- ./INFORMACION -->
