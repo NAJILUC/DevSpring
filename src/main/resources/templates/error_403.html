@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/plantilla/template :: head"></head>
+<head th:replace="plantilla/template :: head"></head>
 <body>
 
 	<header th:replace="plantilla/template :: head"></header>
@@ -14,13 +14,13 @@
 					Los sentimos <span th:text="${#authentication.name}"></span>,
 					NO tienes permisos para acceder a este recurso.
 				</h5>
-				<a th:href="@{/login}" class="btn btn-outline-light" role="button">Ir
+				<a th:href="@{login}" class="btn btn-outline-light" role="button">Ir
 					al inicio</a>
 
 			</div>
 		</div>
 	</div>
 
-	<footer th:replace="/plantilla/template :: footer"></footer>
+	<footer th:replace="plantilla/template :: footer"></footer>
 </body>
 </html>

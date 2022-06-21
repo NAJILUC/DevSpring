@@ -24,14 +24,14 @@
                 <!-- CONTENIDO DINAMICO -->
                 <div class="row col-10 mx-auto mt-5 shadow p-3 mb-5 bg-white rounded">
                     <div class="row mt-4">
-                        <img class="col-4 mx-auto" th:src="@{/img/isotipo.png}">
+                        <img class="col-4 mx-auto" th:src="@{img/isotipo.png}">
                     </div>
                     <div class="mx-auto mt-5">
                         <div class="alert alert-info  mx-auto" th:if="${msg != null}" th:text="${msg}">
 
                         </div>
                         <div class="row">
-                            <a th:href="@{/login}" class="row-md-7 mx-auto btn hudsoft-btn-sm">Iniciar sesión</a>
+                            <a th:href="@{login}" class="row-md-7 mx-auto btn hudsoft-btn-sm">Iniciar sesión</a>
                         </div>
                         <div class="row mt-1">
                          <button class="row-md-7 mx-auto btn btn-sm btn-outline-primary" id="btn_anterior" onClick="history.go(-1);">
