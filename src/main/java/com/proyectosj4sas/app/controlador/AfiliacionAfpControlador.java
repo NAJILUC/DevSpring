@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("afiliaciones/afp")
+@RequestMapping("/afiliaciones/afp")
 public class AfiliacionAfpControlador {
 
 	@Autowired
@@ -28,7 +28,7 @@ public class AfiliacionAfpControlador {
 	@Autowired
 	private FondoPensionServicioImpl afpService;
 
-	@GetMapping("create/{idTrabajador}/{idObrero}")
+	@GetMapping("/create/{idTrabajador}/{idObrero}")
 	public String crearAfiliacion(@PathVariable Long idTrabajador, @PathVariable Long idObrero, Model model) {
 		AfiliadoFondoPension afiliacion = new AfiliadoFondoPension();
 		afiliacion.setTrabajador(trabajadorService.findById(idTrabajador));
@@ -40,7 +40,7 @@ public class AfiliacionAfpControlador {
 		return "/vistas/afiliaciones/afp/crear";
 	}
 
-	@PostMapping("save")
+	@PostMapping("/save")
 	public String guardarAfiliacion(@ModelAttribute AfiliadoFondoPension afiliado, RedirectAttributes flash,
 			Model model, @RequestParam("idObrero") Long idObrero) {
 		afiliadoAfpService.save(afiliado);
@@ -48,7 +48,7 @@ public class AfiliacionAfpControlador {
 		return "redirect:/vistas/obreros/modificar/" + idObrero;
 	}
 
-	@GetMapping("update/{afiliado}/{idObrero}")
+	@GetMapping("/update/{afiliado}/{idObrero}")
 	public String actualizarAfiliacion(@PathVariable Long afiliado, @PathVariable Long idObrero, Model model) {
 		model.addAttribute("titulo", "MODIFICAR AFILIACION ARL");
 		model.addAttribute("ruta_de_navegacion", "MODIFICACION DE AFILIACION ARL");
@@ -58,7 +58,7 @@ public class AfiliacionAfpControlador {
 		return "/vistas/afiliaciones/afp/modificar";
 	}
 
-	@PostMapping("save/update/")
+	@PostMapping("/save/update/")
 	public String actualizarAfiliacion(@ModelAttribute AfiliadoFondoPension afiliado, RedirectAttributes flash,
 			Model model, @RequestParam("idObrero") Long idObrero) {
 		if (afiliado.getFondoPension().getId() == 16) {
@@ -70,6 +70,6 @@ public class AfiliacionAfpControlador {
 		}
 
 		flash.addFlashAttribute("success", "afiliacion de afp modificada correctamente");
-		return "redirect:vistas/obreros/modificar/" + idObrero;
+		return "redirect:/vistas/obreros/modificar/" + idObrero;
 	}
 }

@@ -11,14 +11,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class LoginControlador {
 
-	@GetMapping("login")
+	@GetMapping("/login")
 	public String login(@RequestParam(value = "error", required = false) String error,
 			@RequestParam(value = "logout", required = false) String logout, Model model, Principal principal,
 			RedirectAttributes flash) {
 
 		if (principal != null) {
 			flash.addFlashAttribute("info", "Ya ha iniciado sesion");
-			return "redirect:";
+			return "redirect:/";
 		} else if (error != null) {
 			model.addAttribute("error",
 					"Error en el login: Nombre de usuario o clave incorrecta, intentalo nuevamente");
