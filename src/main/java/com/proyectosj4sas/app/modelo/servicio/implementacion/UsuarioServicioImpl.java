@@ -134,7 +134,7 @@ public class UsuarioServicioImpl implements IServicio<Usuario, Long>, UserDetail
 			String content = TEXT_BODY.replace("$tokenValue", token);
 			content = content.replace("$username", usuario.getUsername());
 			//content = content.replace("$host_to_deploy", "ec2-3-208-12-106.compute-1.amazonaws.com");
-			content=content.replace("$host_to_deploy", "localhost");
+			content=content.replace("$host_to_deploy", "smtp.mailtrap.io");
 			emailBody.setContent(content);
 			return emailPort.sendEmail(emailBody);
 		}
