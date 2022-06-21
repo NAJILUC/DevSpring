@@ -40,13 +40,13 @@ public class Proyectosj4sasApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 	  
-//		  Usuario u = new Usuario(); 
-//		  u.setEmail("asimplemailmore@gmail.com");
-//		  u.setPassword(passwordEncoder.encode("amanecer")); 
-//		  u.setUsername("antares");
-//		  u.setEnable(true);		  
-//		  
-//		  userService.save(u);
+		  Usuario u = new Usuario(); 
+		  u.setEmail("asimplemailmore@gmail.com");
+		  u.setPassword(passwordEncoder.encode("amanecer")); 
+		  u.setUsername("antares");
+	 	 u.setEnable(true);		  
+		  
+		  userService.save(u);
 
 	}
 }
