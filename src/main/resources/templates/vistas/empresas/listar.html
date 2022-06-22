@@ -89,15 +89,15 @@
 										<td th:text="${empresa.nit}"></td>
 										<td th:text="${empresa.direccion}"></td>
 										<td th:text="${empresa.telefono}"></td>
-										<td><a th:href="@{empresas/}+${empresa.id}" class="hudsoft-btn-sm">Empresa</a>
-											<a th:href="@{empresas/__${empresa.id}__/obras}" class="hudsoft-btn-sm">Obras</a></td>
+										<td><a th:href="@{/empresas/}+${empresa.id}" class="hudsoft-btn-sm">Empresa</a>
+											<a th:href="@{/empresas/__${empresa.id}__/obras}" class="hudsoft-btn-sm">Obras</a></td>
 									</tr>
 
 								</tbody>
 							</table>
 						</div>
 						<div class="card-footer">
-							<a th:href="@{empresas/registrar}"
+							<a th:href="@{/empresas/registrar}"
 									class="hudsoft-btn-sm float-right mr-1	" >Agregar Empresa</a>
 						</div>
 					</div>
