@@ -49,7 +49,7 @@ public class ObraControlador {
 		model.addAttribute("ruta_de_navegacion", "Listado general de obras");
 		model.addAttribute("obras", obras);
 		model.addAttribute("total_obreros", total_obreros);
-		return "/vistas/obras/listado_completo";
+		return "vistas/obras/listado_completo";
 	}
 
 	@GetMapping("/obras/registrar/{idEmpresa}")
@@ -57,7 +57,7 @@ public class ObraControlador {
 		model.addAttribute("titulo", "PROYECTOS E INGENIERIA J4 S.A.");
 		model.addAttribute("ruta_de_navegacion", "Registrar una obra");
 		model.addAttribute("obra", new Obra());
-		return "/vistas/obras/registrar.html";
+		return "vistas/obras/registrar.html";
 	}
 
 	@PostMapping("/obras/guardar")
@@ -76,14 +76,14 @@ public class ObraControlador {
 		flash.addFlashAttribute("success", "Obra registrada correctamente");
 
 		
-		return "redirect:/empresas/" + idEmpresa + "/obras/";
+		return "redirect:empresas/" + idEmpresa + "/obras/";
 	}
 
 	@GetMapping("/obras")
 	public String listar(Model model) {
 		model.addAttribute("titulo", "Obras");
 		model.addAttribute("ruta_de_navegacion", "Obras");
-		return "/vistas/obras/listar";
+		return "vistas/obras/listar";
 	}
 
 	@GetMapping("/obras/{id}")
@@ -94,7 +94,7 @@ public class ObraControlador {
 		model.addAttribute("ruta_de_navegacion", "Obra");
 		model.addAttribute("obra", obra);
 		model.addAttribute("obreros", obra.getObrero());
-		return "/vistas/obras/obra";
+		return "vistas/obras/obra";
 	}
 
 	@GetMapping("/constructoras/obras/{id}")
