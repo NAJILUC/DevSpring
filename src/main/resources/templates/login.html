@@ -21,7 +21,7 @@
                     <h3 class="introduce_txt">Introduce tus datos:</h3>
 
 
-                    <form th:action="@{/login}" method="post">
+                    <form th:action="@{login}" method="post">
                         <input id="csrf_token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                         <div class="divX">
                             <input class="input_usuario" type="text" placeholder="Usuario" name="username" autofocus id="username" required>
