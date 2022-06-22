@@ -33,7 +33,7 @@ public class EmpresaControlador {
 		model.addAttribute("titulo", "Empresas asociadas");
 		model.addAttribute("ruta_de_navegacion", "Empresas asociadas");
 		model.addAttribute("empresas", empresas);
-		return "/vistas/empresas/listar";
+		return "vistas/empresas/listar";
 	}
 
 	@GetMapping("/{id}")
@@ -47,7 +47,7 @@ public class EmpresaControlador {
 		}else {
 			model.addAttribute("danger", "No existe empresa!");
 		}
-		return "/vistas/empresas/empresa";
+		return "vistas/empresas/empresa";
 	}
 	
 	@GetMapping("/{id_empresa}/obras")
@@ -64,7 +64,7 @@ public class EmpresaControlador {
 		model.addAttribute("total_obreros", empresa.totalObreros());
 		model.addAttribute("idEmpresa", id_empresa);
 		model.addAttribute("obras", obras);
-		return "/vistas/obras/listar";
+		return "vistas/obras/listar";
 	}
 	
 	@GetMapping("/registrar")
@@ -72,27 +72,27 @@ public class EmpresaControlador {
 		model.addAttribute("titulo", "Registro Empresa");
 		model.addAttribute("ruta_de_navegacion", "Registro Empresa");
 		model.addAttribute("empresa", new Empresa());
-		return "/vistas/empresas/registrar";
+		return "vistas/empresas/registrar";
 	}
 	@GetMapping("/modificar/{idEmpresa}")
 	public String modificar(@PathVariable Long idEmpresa,Model model) {
 		model.addAttribute("titulo", "Modificar Empresa");
 		model.addAttribute("ruta_de_navegacion", "Modificar Empresa");
 		model.addAttribute("empresa", empresaService.findById(idEmpresa));
-		return "/vistas/empresas/modificar";
+		return "vistas/empresas/modificar";
 	}
 	@PostMapping("/guardar_modificado")
 	public String guardarModificado(@ModelAttribute Empresa empresa, RedirectAttributes flash) {
 		empresaService.save(empresa);
 		flash.addFlashAttribute("success", "Empresa Modificada correctamente");
-		return "redirect:/empresas/"+empresa.getId();
+		return "redirect:empresas/"+empresa.getId();
 	}
 	
 	@PostMapping("/guardar")
 	public String guardar(@ModelAttribute Empresa empresa, RedirectAttributes flash) {
 		empresaService.save(empresa);
 		flash.addFlashAttribute("success", "Empresa registrada correctamente");
-		return "redirect:/empresas/";
+		return "redirect:empresas/";
 	}
 
 }
