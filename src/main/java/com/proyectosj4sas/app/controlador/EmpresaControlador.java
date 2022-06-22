@@ -85,14 +85,14 @@ public class EmpresaControlador {
 	public String guardarModificado(@ModelAttribute Empresa empresa, RedirectAttributes flash) {
 		empresaService.save(empresa);
 		flash.addFlashAttribute("success", "Empresa Modificada correctamente");
-		return "redirect:empresas/"+empresa.getId();
+		return "redirect:/empresas/"+empresa.getId();
 	}
 	
 	@PostMapping("/guardar")
 	public String guardar(@ModelAttribute Empresa empresa, RedirectAttributes flash) {
 		empresaService.save(empresa);
 		flash.addFlashAttribute("success", "Empresa registrada correctamente");
-		return "redirect:empresas/";
+		return "redirect:/empresas/";
 	}
 
 }
