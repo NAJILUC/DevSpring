@@ -104,13 +104,13 @@
 
                         <div class="card-footer">
                             <!--
-								<a th:if="${empresa.contador != null}" th:href="@{/contador/crear/}+${empresa.id}"
+								<a th:if="${empresa.contador != null}" th:href="@{contador/crear/}+${empresa.id}"
 								class="hudsoft-btn-sm">Modificar Contador</a>
-							<a th:if="${empresa.contador == null}" th:href="@{/contador/crear/}+${empresa.id}"
+							<a th:if="${empresa.contador == null}" th:href="@{contador/crear/}+${empresa.id}"
 								class="hudsoft-btn-sm">Agregar Contador</a>
 						-->
 
-                            <a th:href="@{/empresas/modificar/}+${empresa.id}" class="hudsoft-btn-sm text-center float-right">Modificar</a>
+                            <a th:href="@{empresas/modificar/}+${empresa.id}" class="hudsoft-btn-sm text-center float-right">Modificar</a>
                         </div>
                     </div>
                     <div>

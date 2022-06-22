@@ -73,11 +73,11 @@
 											th:onclick="'smodal(\'' + ${obrero.id} + '\');'"><i
 												class="ml-1 far fa-eye mr-1"></i> </a> 
 											<a class="hudsoft-btn-sm hudsoft-success"
-											th:href="@{/vistas/obreros/modificar/}+${obrero.id}"
+											th:href="@{vistas/obreros/modificar/}+${obrero.id}"
 											name="btn_modificar"> <i
 												class="ml-1 fas fa-edit mr-1"></i> </a> 
 											<a class="hudsoft-btn-sm hudsoft-danger"
-											th:href="@{/vistas/obreros/eliminar/}+${obrero.id}"> 
+											th:href="@{vistas/obreros/eliminar/}+${obrero.id}"> 
 											<i class="ml-1 fas fa-trash mr-1"></i> </a>
 										</td>
 
@@ -89,9 +89,9 @@
 
 
 							<a th:if="${not #lists.isEmpty(obra.obrero)}"
-							   th:href="@{/constructoras/obras/}+${obra.id}"
+							   th:href="@{constructoras/obras/}+${obra.id}"
 							   class="hudsoft-btn-sm float-right">Reportes</a> 
-							<a th:href="@{/vistas/obreros/crear/}+${obra.id}"
+							<a th:href="@{vistas/obreros/crear/}+${obra.id}"
 							   class="hudsoft-btn-sm float-right mr-1">Agregar obrero</a>
 						</div>
 					</div>
