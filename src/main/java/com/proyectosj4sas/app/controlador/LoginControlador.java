@@ -26,6 +26,6 @@ public class LoginControlador {
 			model.addAttribute("success", "Ha cerrado sesión con éxito!");
 		}
 
-		return "/login";
+		return "login";
 	}
 }
