@@ -37,7 +37,7 @@ public class SisoControlador {
         model.addAttribute("ruta_de_navegacion", "REGISTRO DE SISO");
         model.addAttribute("idObra", idObra);
         model.addAttribute("siso", representante);
-        return "/vistas/siso/registrar";
+        return "vistas/siso/registrar";
     }
     @PostMapping("/guardar")
     public String guardar(@ModelAttribute Siso siso, RedirectAttributes flash,
@@ -64,7 +64,7 @@ public class SisoControlador {
         model.addAttribute("ruta_de_navegacion", "MODIFICACION DE SISO");
         model.addAttribute("idObra", idObra);
         model.addAttribute("siso", siso);
-        return "/vistas/siso/modificar";
+        return "vistas/siso/modificar";
     }
     @PostMapping("/guardar_modificado")
     public String guardarModificado(@ModelAttribute Siso siso, RedirectAttributes flash,

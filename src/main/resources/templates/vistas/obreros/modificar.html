@@ -39,6 +39,7 @@
 
 
                             <form th:action="@{/vistas/obreros/update}" method="post" th:object="${obrero}">
+                                <input id="csrf_token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                                 <div class="form-group row">
                                     <label class="col-md-4" for="nombre">Nombre</label> <input class="form_registro col-lg-6 border-1" id="nombre" th:field="${obrero.trabajador.nombre}" placeholder="Nombre">
                                     <small class="form-text text-danger" th:if="${#fields.hasErrors('trabajador.nombre')}" th:errors="*{trabajador.nombre}"></small>
@@ -106,7 +107,7 @@
     <!-- /#page-content-wrapper -->
 
     <!-- JAVASCRIPT -->
-    <script type="text/javascript" th:src="@{js/obreros/registrar.js}"></script>
+    <script type="text/javascript" th:src="@{/js/obreros/registrar.js}"></script>
     <!-- ./JAVASCRIPT -->
 </body>
 

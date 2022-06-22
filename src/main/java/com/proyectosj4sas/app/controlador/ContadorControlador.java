@@ -26,16 +26,16 @@ public class ContadorControlador {
 private EmpresaServicioImpl empresaService;
 
 
-    @GetMapping("crear/{idEmpresa}")
+    @GetMapping("/crear/{idEmpresa}")
     public String agregar(@PathVariable Long idEmpresa, Model model){
         Contador contador = new Contador();
 		model.addAttribute("titulo", "CREAR Contador");
         model.addAttribute("ruta_de_navegacion", "REGISTRO DE CONTADOR");
         model.addAttribute("idEmpresa", idEmpresa);
 		model.addAttribute("contador", contador);
-        return "/vistas/contador/registrar";
+        return "vistas/contador/registrar";
     }
-    @GetMapping("modificar/{idEmpresa}")
+    @GetMapping("/modificar/{idEmpresa}")
     public String modificar(@PathVariable Long idEmpresa, Model model){
         Empresa empresa = empresaService.findById(idEmpresa);
         
@@ -44,7 +44,7 @@ private EmpresaServicioImpl empresaService;
         model.addAttribute("ruta_de_navegacion", "REGISTRO DE CONTADOR");
         model.addAttribute("idEmpresa", idEmpresa);
 		model.addAttribute("contador", contador);
-        return "/vistas/contador/modificar";
+        return "vistas/contador/modificar";
     }
     @PostMapping("/guardar_modificacion")
     public String guardarModificado(@ModelAttribute Contador contador,

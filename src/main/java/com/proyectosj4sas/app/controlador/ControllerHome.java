@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ControllerHome {
 
-	@GetMapping("")
+	@GetMapping("/")
 	public String index(Model model) {
 		model.addAttribute("titulo", "PROYECTOS E INGENIERIA J4 S.A.");
 		model.addAttribute("ruta_de_navegacion", "Vista Principal");
 		return "index";
 	}
 	
-	@GetMapping("registrar")
+	@GetMapping("/registrar")
 	public String registro(Model model) {
 		model.addAttribute("titulo", "PROYECTOS E INGENIERIA J4 S.A.");
 		model.addAttribute("ruta_de_navegacion", "Registrar");

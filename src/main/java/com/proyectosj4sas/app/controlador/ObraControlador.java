@@ -76,7 +76,7 @@ public class ObraControlador {
 		flash.addFlashAttribute("success", "Obra registrada correctamente");
 
 		
-		return "redirect:empresas/" + idEmpresa + "/obras/";
+		return "redirect:/empresas/" + idEmpresa + "/obras/";
 	}
 
 	@GetMapping("/obras")

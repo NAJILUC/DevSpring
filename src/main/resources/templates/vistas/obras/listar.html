@@ -103,14 +103,14 @@
 
                                         <td th:text="${obra.obrero.size()}"></td>
                                         <td>
-                                            <a th:href="@{obras/}+${obra.id}" class="hudsoft-btn-sm"> <i class="far fa-eye"> </i></a>
+                                            <a th:href="@{/obras/}+${obra.id}" class="hudsoft-btn-sm"> <i class="far fa-eye"> </i></a>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="card-footer">
-                            <a th:href="@{obras/registrar/}+${idEmpresa}" class="hudsoft-btn-sm float-right mr-1	">Agregar
+                            <a th:href="@{/obras/registrar/}+${idEmpresa}" class="hudsoft-btn-sm float-right mr-1	">Agregar
 								Obra</a>
 
                         </div>
@@ -215,7 +215,7 @@
         </div>
     </div>
     <!-- JAVASCRIPT -->
-    <script type="text/javascript" th:src="@{js/obras/listar.js}"></script>
+    <script type="text/javascript" th:src="@{/js/obras/listar.js}"></script>
     <!-- ./JAVASCRIPT -->
 </body>
 

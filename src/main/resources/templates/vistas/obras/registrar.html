@@ -39,7 +39,7 @@
 
 
                         <form th:action="@{/obras/guardar}" method="post" th:object="${obra}">
-
+                            <input id="csrf_token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                             <div class="form-group row">
                                 <h3 class="col-md-6" for="nombre">Informacion Basica:</h3>
                             </div>

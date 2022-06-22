@@ -37,7 +37,7 @@ public class AfiliacionAfpControlador {
 		model.addAttribute("afps", afpService.findAll());
 		model.addAttribute("idObrero", idObrero);
 		model.addAttribute("afiliacionAfp", afiliacion);
-		return "/vistas/afiliaciones/afp/crear";
+		return "vistas/afiliaciones/afp/crear";
 	}
 
 	@PostMapping("/save")
@@ -55,7 +55,7 @@ public class AfiliacionAfpControlador {
 		model.addAttribute("afps", afpService.findAll());
 		model.addAttribute("idObrero", idObrero);
 		model.addAttribute("afiliacionAfp", afiliadoAfpService.findById(afiliado));
-		return "/vistas/afiliaciones/afp/modificar";
+		return "vistas/afiliaciones/afp/modificar";
 	}
 
 	@PostMapping("/save/update/")

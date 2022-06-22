@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
-<head th:replace="/plantilla/template :: head">
+<head th:replace="plantilla/template :: head">
 </head>
 
 <body>
@@ -39,6 +39,7 @@
 
 
                             <form th:action="@{/representantes/guardar_modificado}" th:object="${representante}" method="POST">
+                                <input id="csrf_token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                                 <div class="form-group row">
                                     <label class="col-md-4" for="nombre">Nombres:</label> <input th:field="${representante.nombre}" class="form_registro text-secondary" id="nombre" placeholder="">
                                 </div>

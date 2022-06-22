@@ -36,7 +36,7 @@ public class AfiliacionEpsControlador {
 		model.addAttribute("epss", epsService.findAll());
 		model.addAttribute("idObrero", idObrero);
 		model.addAttribute("afiliacionEps", afiliacion);
-		return "/vistas/afiliaciones/eps/crear";
+		return "vistas/afiliaciones/eps/crear";
 	}
 
 	@PostMapping("/save")
@@ -59,7 +59,7 @@ public class AfiliacionEpsControlador {
 		model.addAttribute("epss", epsService.findAll());
 		model.addAttribute("idObrero", idObrero);
 		model.addAttribute("afiliacionEps", afiliadoEpsService.findById(afiliado));
-		return "/vistas/afiliaciones/eps/modificar";
+		return "vistas/afiliaciones/eps/modificar";
 	}
 
 	@PostMapping("/save/update/")

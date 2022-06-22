@@ -57,6 +57,7 @@
 
 
                         <form th:action="@{/empresas/guardar_modificado}" method="post" th:object="${empresa}">
+                            <input id="csrf_token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                             <div class="form-group row mt-4">
                                 <label class="col-md-4 float-left" for="">NOMBRE:</label>
                                 <input class="form_registro text-secondary" id="nombre" th:field="${empresa.nombre}">

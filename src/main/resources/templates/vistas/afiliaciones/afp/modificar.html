@@ -32,6 +32,7 @@
 
 					<form th:action="@{/afiliaciones/afp/save/update/}" method="post" th:object="${afiliacionAfp}">
 
+						<input id="csrf_token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 						<div class="form-group row">
 							<label for="">codigo de afiliado:</label>
 							<input th:field="${afiliacionAfp.codigo}">
@@ -66,7 +67,7 @@
 	<!-- /#page-content-wrapper -->
 
 	<!-- JAVASCRIPT -->
-	<script type="text/javascript" th:src="@{js/obreros/registrar.js}"></script>
+	<script type="text/javascript" th:src="@{/js/obreros/registrar.js}"></script>
 	<!-- ./JAVASCRIPT -->
 </body>
 

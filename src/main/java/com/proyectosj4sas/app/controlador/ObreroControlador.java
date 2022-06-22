@@ -67,7 +67,7 @@ public class ObreroControlador {
 		model.addAttribute("ruta_de_navegacion", "REGISTRO DE OBRERO");
 		model.addAttribute("obrero", obrero);
 		model.addAttribute("idObra", idObra);
-		return "/vistas/obreros/registrar";
+		return "vistas/obreros/registrar";
 	}
 	@GetMapping({ "/eliminar/{idObrero}" })
 	public String eliminar(@PathVariable Long idObrero, Model model, RedirectAttributes flash) {
@@ -101,7 +101,7 @@ public class ObreroControlador {
 		model.addAttribute("ruta_de_navegacion", "MODIFICACION DE OBRERO");
 		model.addAttribute("obrero", obrero);
 		// model.addAttribute("idObra", idObra);
-		return "/vistas/obreros/modificar";
+		return "vistas/obreros/modificar";
 	}
 	@PostMapping("/guardar")
 	public String guardar(@ModelAttribute Obrero obrero, RedirectAttributes flash, Model model,
@@ -176,7 +176,7 @@ public class ObreroControlador {
 		model.addAttribute("arls", arlService.findAll());
 		model.addAttribute("idObrero", idObrero);
 		model.addAttribute("afiliacionArl",af);
-		return "/vistas/obreros/crear_afiliacion_arl";
+		return "vistas/obreros/crear_afiliacion_arl";
 	}
 
 	@GetMapping("/update/afiliacion_arl/{idAfiliacion}/{idObrero}")
@@ -186,7 +186,7 @@ public class ObreroControlador {
 		model.addAttribute("arls", arlService.findAll());
 		model.addAttribute("idObrero", idObrero);
 		model.addAttribute("afiliacionArl", afiliadoArlService.findById(idAfiliacion));
-		return "/vistas/obreros/modificar_afiliacion_arl";
+		return "vistas/obreros/modificar_afiliacion_arl";
 	}
 	
 	@PostMapping("/update/afiliacion_arl")

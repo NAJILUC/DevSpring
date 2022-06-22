@@ -33,7 +33,7 @@ public class RepresentanteControlador {
         model.addAttribute("ruta_de_navegacion", "REGISTRO DE REPRESENTANTE");
         model.addAttribute("idObra", idObra);
         model.addAttribute("representante", representante);
-        return "/vistas/representante/registrar";
+        return "vistas/representante/registrar";
     }
 
     @GetMapping("/modificar/{idObra}")
@@ -43,7 +43,7 @@ public class RepresentanteControlador {
         model.addAttribute("ruta_de_navegacion", "MODIFICACION DE REPRESENTANTE");
         model.addAttribute("idObra", idObra);
         model.addAttribute("representante", representante);
-        return "/vistas/representante/modificar";
+        return "vistas/representante/modificar";
     }
 
     @PostMapping("/guardar")

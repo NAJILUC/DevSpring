@@ -38,6 +38,7 @@
 
 
                             <form class="mt-3" th:action="@{/contador/guardar_modificacion}" method="post" th:object="${contador}">
+                                <input id="csrf_token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                                 <div class="form-group row">
                                     <label class="col-md-4" for="nombre">Nombres y apellidos:</label> <input th:field="${contador.nombre}" class="form_registro text-secondary" id="nombre" placeholder="">
                                 </div>

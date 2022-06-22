@@ -32,7 +32,7 @@
 
 
                         <form class="mt-4" th:action="@{/vistas/obreros/update/afiliacion_arl}" method="post" th:object="${afiliacionArl}">
-
+                            <input id="csrf_token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                             <div class="form-group row">
                                 <label for="" class="mr-3">Código de afiliado:</label>
                                 <input th:field="${afiliacionArl.codigo}">
@@ -67,7 +67,7 @@
         <!-- /#page-content-wrapper -->
 
         <!-- JAVASCRIPT -->
-        <script type="text/javascript" th:src="@{js/obreros/registrar.js}"></script>
+        <script type="text/javascript" th:src="@{/js/obreros/registrar.js}"></script>
         <!-- ./JAVASCRIPT -->
 </body>
 
